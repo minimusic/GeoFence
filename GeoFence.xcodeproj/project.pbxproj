@@ -9,19 +9,23 @@
 /* Begin PBXBuildFile section */
 		63E157E41FA38B6B00D4F0D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E157E31FA38B6B00D4F0D1 /* AppDelegate.swift */; };
 		63E157E61FA38B6B00D4F0D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E157E51FA38B6B00D4F0D1 /* ViewController.swift */; };
-		63E157E91FA38B6B00D4F0D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63E157E71FA38B6B00D4F0D1 /* Main.storyboard */; };
 		63E157EB1FA38B6B00D4F0D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63E157EA1FA38B6B00D4F0D1 /* Assets.xcassets */; };
 		63E157EE1FA38B6B00D4F0D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63E157EC1FA38B6B00D4F0D1 /* LaunchScreen.storyboard */; };
+		63E157F61FA38BA200D4F0D1 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E157F51FA38BA200D4F0D1 /* MapVC.swift */; };
+		63E157F81FA3A0F800D4F0D1 /* FenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E157F71FA3A0F800D4F0D1 /* FenceView.swift */; };
+		63E157FB1FA3F52200D4F0D1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E157FA1FA3F50D00D4F0D1 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		63E157E01FA38B6B00D4F0D1 /* GeoFence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoFence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63E157E31FA38B6B00D4F0D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63E157E51FA38B6B00D4F0D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		63E157E81FA38B6B00D4F0D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63E157EA1FA38B6B00D4F0D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63E157ED1FA38B6B00D4F0D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63E157EF1FA38B6B00D4F0D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63E157F51FA38BA200D4F0D1 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		63E157F71FA3A0F800D4F0D1 /* FenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FenceView.swift; sourceTree = "<group>"; };
+		63E157FA1FA3F50D00D4F0D1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E157FB1FA3F52200D4F0D1 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				63E157E21FA38B6B00D4F0D1 /* GeoFence */,
 				63E157E11FA38B6B00D4F0D1 /* Products */,
+				63E157F91FA3F50D00D4F0D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +61,22 @@
 			isa = PBXGroup;
 			children = (
 				63E157E31FA38B6B00D4F0D1 /* AppDelegate.swift */,
+				63E157F51FA38BA200D4F0D1 /* MapVC.swift */,
+				63E157F71FA3A0F800D4F0D1 /* FenceView.swift */,
 				63E157E51FA38B6B00D4F0D1 /* ViewController.swift */,
-				63E157E71FA38B6B00D4F0D1 /* Main.storyboard */,
 				63E157EA1FA38B6B00D4F0D1 /* Assets.xcassets */,
 				63E157EC1FA38B6B00D4F0D1 /* LaunchScreen.storyboard */,
 				63E157EF1FA38B6B00D4F0D1 /* Info.plist */,
 			);
 			path = GeoFence;
+			sourceTree = "<group>";
+		};
+		63E157F91FA3F50D00D4F0D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63E157FA1FA3F50D00D4F0D1 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +140,6 @@
 			files = (
 				63E157EE1FA38B6B00D4F0D1 /* LaunchScreen.storyboard in Resources */,
 				63E157EB1FA38B6B00D4F0D1 /* Assets.xcassets in Resources */,
-				63E157E91FA38B6B00D4F0D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +151,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				63E157E61FA38B6B00D4F0D1 /* ViewController.swift in Sources */,
+				63E157F61FA38BA200D4F0D1 /* MapVC.swift in Sources */,
+				63E157F81FA3A0F800D4F0D1 /* FenceView.swift in Sources */,
 				63E157E41FA38B6B00D4F0D1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,14 +160,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		63E157E71FA38B6B00D4F0D1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				63E157E81FA38B6B00D4F0D1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		63E157EC1FA38B6B00D4F0D1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
