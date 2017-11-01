@@ -31,7 +31,9 @@ class MapVC: UIViewController {
         
         // set up tool bar
         let addButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(addFenceBox(sender:)))
-        self.setToolbarItems([addButton], animated: false)
+        let clearButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.trash, target: self, action: #selector(clearAll(sender:)))
+        let spacer = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        self.setToolbarItems([addButton, spacer, clearButton], animated: false)
         
         // other controls?
         
@@ -55,8 +57,24 @@ class MapVC: UIViewController {
         
         
     }
-    func deleteFenceBox() {
+    
+    @objc func clearAll(sender: UIBarButtonItem) {
+        for view in self.view.subviews {
+            if self.fenceArray.contains(view) {
+                view.removeFromSuperview()
+            }
+        }
+        self.fenceArray.removeAllObjects()
         
+    }
+    
+    func testDrop () {
+        // Test if dropped on toolbar
+        
+    }
+    
+    func deleteFenceBox() {
+        // If dragged over toolbar, delete
     }
     /*
     // MARK: - Navigation
